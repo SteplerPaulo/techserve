@@ -1,4 +1,4 @@
-<!--
+
 <section id="main-slider" class="no-margin">
 	<div class="carousel slide">
 		<ol class="carousel-indicators">
@@ -618,7 +618,5 @@
 		</div>
 	</div>
 </footer> 
--->
-<?php include('dashboard.ctp');?>
-<?php //include('login.ctp');
-?>
+
+<?php include('login.ctp');?>

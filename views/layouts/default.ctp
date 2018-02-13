@@ -5,16 +5,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<title>Home | Manila Bite</title>
-		 
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="/manila_bite/css/template\font-awesome-4.4.0\css\font-awesome.css">
-		<link href="css/animate.min.css" rel="stylesheet">
-		<link href="css/prettyPhoto.css" rel="stylesheet">
-		<link href="css/main.css" rel="stylesheet">
-		<link href="css/responsive.css" rel="stylesheet">
-		<link href="css/techserve.css" rel="stylesheet">
+		<title>Home | TechServe</title>
+		
+		<?php 
+			echo $this->Html->css('bootstrap.min');
+			echo $this->Html->css('template\font-awesome-4.4.0\css\font-awesome');
+			echo $this->Html->css('animate.min');
+			echo $this->Html->css('prettyPhoto');
+			echo $this->Html->css('main');
+			echo $this->Html->css('responsive');
+			echo $this->Html->css('techserve');
+		?>
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv.js"></script>
 			<script src="js/respond.min.js"></script>
@@ -37,27 +38,6 @@
 							<span class="icon-bar"></span>
 						</button>
 						<a class="navbar-brand" href="javascript:void()"><img src="img/techserve4.png"  alt="logo"></a>
-					</div>
-					<div class="collapse navbar-collapse navbar-right">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="application.html">Application</a></li>
-							<li><a href="attendance.html">Attendance</a></li>
-							<li><a href="about-us.html">About Us</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="portfolio.html">Portfolio</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-								<ul class="dropdown-menu">
-									<li><a href="blog-item.html">Blog Single</a></li>
-									<li><a href="pricing.html">Pricing</a></li>
-									<li><a href="404.html">404</a></li>
-									<li><a href="shortcodes.html">Shortcodes</a></li>
-								</ul>
-							</li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="contact-us.html">Contact</a></li>
-						</ul>
 					</div>
 				</div> 
 			</nav> 
