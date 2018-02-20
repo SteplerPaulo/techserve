@@ -33,7 +33,7 @@
 	//Pages
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
 	Router::connect('/login', array('controller' => 'pages', 'action' => 'display','login'));
-	Router::connect('/staff_dashboard', array('controller' => 'pages', 'action' => 'display','staff_dashboard'));
+	Router::connect('/dashboard', array('controller' => 'pages', 'action' => 'display','dashboard'));
 	Router::connect('/employee_record', array('controller' => 'pages', 'action' => 'display','employee_record'));
 	
 	
