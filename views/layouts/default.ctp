@@ -26,7 +26,7 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
 	</head> 
-	<body class="homepage">
+	<body class="homepage" ng-app="App">
 		<header id="header">
 			<nav class="navbar navbar-inverse" role="banner">
 				<div class="container">
@@ -60,11 +60,27 @@
 				</div>
 			</div>
 		</footer> 
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.prettyPhoto.js"></script>
-		<script src="js/jquery.isotope.min.js"></script>
-		<script src="js/main.js"></script>
-		<script src="js/wow.min.js"></script>
+		
+		<?php
+			echo $this->Html->script(array('jquery')); 
+			echo $this->Html->script(array('bootstrap.min')); //Bootstrap Core JavaScript
+			echo $this->Html->script('constant');
+			echo $this->Html->script(array('template/angular.min'));// Angular v1.5.9 (Dependencies for bootstrap modal)
+			echo $this->Html->script(array('template/angular-sanitize'));
+			echo $this->Html->script(array('angularUtils/directives/dirPagination'));
+			echo $this->Html->script(array('angularUtils/directives/ui-bootstrap-tpls-2.3.0.min'));
+			echo $this->Html->script('jquery.prettyPhoto');
+			echo $this->Html->script('jquery.isotope.min');
+			echo $this->Html->script('main');
+			echo $this->Html->script('wow.min');
+			//echo $this->Html->script('plugins/summernote');
+		?>
+		<script type="text/javascript">(function(){window.App = angular.module('App',['angularUtils.directives.dirPagination','ngSanitize'])})();</script>
+		<script>
+			$(function () {
+			  $('[data-toggle="tooltip"]').tooltip()
+			});
+		</script>
+		<?php  echo $scripts_for_layout; ?>
 	</body>
 </html>

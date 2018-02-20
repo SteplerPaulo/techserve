@@ -13,3 +13,6 @@ CakePHP 2
 webroot/index.php
 config/database.php 
 config/database.php
+tmp/cache/persistent/cake_core_object_map
+tmp/cache/persistent/cake_core_object_map
+tmp/cache/persistent/cake_core_dir_map
