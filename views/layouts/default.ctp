@@ -37,7 +37,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="javascript:void()"><img src="img/hysonic.png"  alt="logo"></a>
+						<a class="navbar-brand" href="javascript:void()"><img src="/techserve/img/hysonic.png"  alt="logo"></a>
 					</div>
 				</div> 
 			</nav> 
