@@ -6,7 +6,7 @@
   background-size: cover;;
 }
 */
-
+/**Panel**/
 .panel-yellow {
     border-color: #f0ad4e;
 }
@@ -15,8 +15,6 @@
     color: white;
     background-color: #f0ad4e;
 }
-
-
 .panel-red {
     border-color: #d9534f;
 }
@@ -25,7 +23,6 @@
     color: white;
     background-color: #d9534f;
 }
-
 .panel-green {
     border-color: #5cb85c;
 }
@@ -34,7 +31,21 @@
     color: white;
     background-color: #5cb85c;
 }
-
+/**Huge Text**/
 .huge {
     font-size: 30px;
+}
+/**Custom Navbar**/
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    background: #f0ad4e;
+    padding: 15px 0;
+    padding-bottom: 0;
+}
+/****/
+.img-th{
+	border-radius: 50%;
+    height: 3em;
+    width: 3em;
 }
