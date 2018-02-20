@@ -1,5 +1,5 @@
 <br/>
-<div class="row">
+<div class="row" ng-controller="DashboardController" ng-init="initializeController()">
 	<div class="col-lg-10 col-lg-offset-1">
 		
 		<div class="row">			
@@ -109,13 +109,15 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-2">
-						<select class="form-control input-sm">
-							<option>Vacation</option>
+						<select class='form-control input-sm' ng-model='type'>
+							<option value="">All</option>
+							<option ng-repeat="t in types">{{t.name}}</option>
 						</select>
 					</div>
 					<div class="col-lg-2">
-						<select class="form-control input-sm">
-							<option>2018</option>
+						<select class='form-control input-sm' ng-model='year'>
+							<option value="">All</option>
+							<option ng-repeat="d in years">{{d.name}}</option>
 						</select>
 					</div>
 					<div class="col-lg-6 col-lg-offset-2 text-right">
@@ -136,28 +138,21 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>02/10/2018 - 02/10/2018</td>
-									<td>Vacation<br/><a href="javascript:void()"> See Comments (0)</a></td>
-									<td>02/08/2018</td>
-									<td><a href="javascript:void()">Denied</a> (Jeniffer Cadwell 02/09/2018)</td>
-									<td>-0.88</td>
-								</tr>
-								<tr>
-									<td>02/10/2018 - 02/10/2018</td>
-									<td>Vacation<br/><a href="javascript:void()"> See Comments (0)</a></td>
-									<td>02/08/2018</td>
-									<td><a href="javascript:void()">Denied</a> (Jeniffer Cadwell 02/09/2018)</td>
-									<td>-0.88</td>
-								</tr>
-								<tr>
-									<td>02/10/2018 - 02/10/2018</td>
-									<td>Vacation<br/><a href="javascript:void()"> See Comments (0)</a></td>
-									<td>02/08/2018</td>
-									<td><a href="javascript:void()">Denied</a> (Jeniffer Cadwell 02/09/2018)</td>
+								<tr pagination-id="DataTable" dir-paginate="d in data | filter:year | filter:type | itemsPerPage: pageSize" current-page="currentPage">
+									<td>{{d.date}}</td>
+									<td>{{d.description}}<br/><a href="javascript:void()"> See Comments (0)</a></td>
+									<td>{{d.submitted}}</td>
+									<td><a href="javascript:void()">{{d.status}}</a> ({{d.approver}} {{d.responsed_date}})</td>
 									<td>-0.88</td>
 								</tr>
 							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="5" class="text-center">
+										<dir-pagination-controls pagination-id="DataTable"></dir-pagination-controls>
+									</td>
+								</tr>
+							</tfoot>
 						</table>
 					</div>
 				</div>
@@ -221,3 +216,6 @@
 	-->
 	</div>
 </div>
+
+<?php echo $this->Html->script('controllers/dashboard',array('inline'=>false));
+?>
